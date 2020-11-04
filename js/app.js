@@ -82,8 +82,8 @@ var seattleShop = {
     },
 
 }
-var dubayShop = {
-    city: 'DUBAY',
+var dubaiShop = {
+    city: 'DUBAI',
     minCustomerPerhour: 11,
     maxCustomerPerhour: 38,
     avgCookiesSale: 3.7,
@@ -228,9 +228,9 @@ tokyoShop.generateCustomerPerHour();
 tokyoShop.generateCookiesperHour();
 tokyoShop.makeCitie();
 
-dubayShop.generateCustomerPerHour();
-dubayShop.generateCookiesperHour();
-dubayShop.makeCitie();
+dubaiShop.generateCustomerPerHour();
+dubaiShop.generateCookiesperHour();
+dubaiShop.makeCitie();
 
 parisShop.generateCustomerPerHour();
 parisShop.generateCookiesperHour();
