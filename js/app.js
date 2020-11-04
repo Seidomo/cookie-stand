@@ -20,7 +20,11 @@ var seattleShop = {
             var th3Element = document.createElement('th');
             th3Element.textContent = this.cookiesPerhour[i];
             trElement.appendChild(th3Element);
+            this.totalCookiesPerday += this.cookiesPerhour[i];
         }
+       var  th4Element=document.createElement('th');
+            th4Element.textContent=this.totalCookiesPerday;
+            trElement.appendChild(th4Element);
     },
 
 
@@ -39,9 +43,10 @@ var seattleShop = {
         for (var i = 0; i < this.getCustomerPerhour.length; i++) {
             var totalCookiesPerHour = Math.ceil(this.getCustomerPerhour[i] * this.avgCookiesSale);
             this.cookiesPerhour.push(totalCookiesPerHour);
+           
         }
     },
-
+    
 }
     var tokyoShop = {
     city: 'TOKYO',
@@ -61,7 +66,11 @@ var seattleShop = {
             var th3Element = document.createElement('th');
             th3Element.textContent = this.cookiesPerhour[i];
             trElement.appendChild(th3Element);
+            this.totalCookiesPerday += this.cookiesPerhour[i];
         }
+        var  th4Element=document.createElement('th');
+        th4Element.textContent=this.totalCookiesPerday;
+        trElement.appendChild(th4Element);
     },
     generateCustomerPerHour: function () {
         for (var i = 0; i < operationHours.length; i++) {
@@ -100,7 +109,11 @@ var dubaiShop = {
             var th3Element = document.createElement('th');
             th3Element.textContent = this.cookiesPerhour[i];
             trElement.appendChild(th3Element);
+            this.totalCookiesPerday += this.cookiesPerhour[i];
         }
+        var  th4Element=document.createElement('th');
+        th4Element.textContent=this.totalCookiesPerday;
+        trElement.appendChild(th4Element);
     },
     generateCustomerPerHour: function () {
         for (var i = 0; i < operationHours.length; i++) {
@@ -139,7 +152,11 @@ var parisShop = {
             var th3Element = document.createElement('th');
             th3Element.textContent = this.cookiesPerhour[i];
             trElement.appendChild(th3Element);
+            this.totalCookiesPerday += this.cookiesPerhour[i];
         }
+        var  th4Element=document.createElement('th');
+        th4Element.textContent=this.totalCookiesPerday;
+        trElement.appendChild(th4Element);
     },
     generateCustomerPerHour: function () {
         for (var i = 0; i < operationHours.length; i++) {
@@ -178,7 +195,11 @@ var limaShop = {
             var th3Element = document.createElement('th');
             th3Element.textContent = this.cookiesPerhour[i];
             trElement.appendChild(th3Element);
+            this.totalCookiesPerday += this.cookiesPerhour[i];
         }
+        var  th4Element=document.createElement('th');
+        th4Element.textContent=this.totalCookiesPerday;
+        trElement.appendChild(th4Element);
     },
     generateCustomerPerHour: function () {
         for (var i = 0; i < operationHours.length; i++) {
@@ -199,6 +220,23 @@ var limaShop = {
     },
 
 }
+function makeTotal(){
+    var trElement=document.createElement('tr');
+    var  thElement=document.createElement('th');
+         thElement.textContent='TOTAL';
+         trElement.appendChild(thElement);
+         //thi loop controls the hours
+        for(var i=0; i< operationHours.length; i++){
+             var total=0 
+            for (var j=0; j<stores.length; j++){
+              total= stores[j] .cookiesPerhour[i] + total;
+            }
+    var totalTables =document.createElement('th');
+            totalTables.textContent= total ;
+            trElement.appendChild(totalTables);
+         }
+         tableParent.appendChild(trElement);
+}
 function makeHeader() {
     var trElement = document.createElement('tr');
     var thElement = document.createElement('th');
@@ -214,8 +252,9 @@ function makeHeader() {
     th3Element.textContent = 'Daily Loaction Total';
     trElement.appendChild(th3Element);
 }
+var stores = [seattleShop, tokyoShop, dubaiShop, parisShop, limaShop];
 
-//var cities = ['SEATTLE', 'TOKYO', 'DUBAY', 'PARIS', 'LIMA', 'TOTALS']
+
 
 makeHeader();
 
@@ -239,3 +278,5 @@ parisShop.makeCitie();
 limaShop.generateCustomerPerHour();
 limaShop.generateCookiesperHour();
 limaShop.makeCitie();
+makeTotal();
+
