@@ -14,3 +14,5 @@ Skyler for that.
 
 well for today am a little behind working on the css for the cookie stand
 because i thought the wire framing assignment was for today and i wasted much of my time on that 
+
+i think today was good day for me i get rid of all the junc code or as its called DRY code and did a better one which is shorter and cleaner but at first it wouldnt run because i forgot quotations while i was creating my table but with help oh TA Chance i was able to find the bug and now it runs snf also di the total row too
