@@ -128,6 +128,12 @@ Store.prototype.render= function(){
      }
      generateFootRow();
 
+     var storesToAdd = document.getElementById('dataentry')
+     storesToAdd.addEventListener('submit', addStores);
+     function addStores(event){
+         
+     }
+
 
 
 
