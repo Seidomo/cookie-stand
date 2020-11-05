@@ -11,3 +11,6 @@ today was Lab 07 i have finished my previous assignement wich was Lab 06 using t
 of Lena as a reference so i will like to thank Lena for that but the constructive one i tried 
 my best but as usual i had to call a TA to help me with the side colom and i would like to thank 
 Skyler for that.
+
+well for today am a little behind working on the css for the cookie stand
+because i thought the wire framing assignment was for today and i wasted much of my time on that 
