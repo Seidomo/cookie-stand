@@ -23,7 +23,7 @@ Store.prototype.getCustomerPerHour = function(){
         this.getCustomerPerhour.push(randomCustomerNumber);
 
     }
-}///??//
+}
 Store.prototype.generateCookiesperHour=function(){
     for(var i=0; i<this.getCustomerPerhour.length; i++){
         var cookiessoldPerhour = Math.ceil(this.getCustomerPerhour[i] * this.avgCookiesSale);
@@ -35,8 +35,6 @@ Store.prototype.generateCookiesperHour=function(){
 Store.prototype.render= function(){
     this.getCustomerPerHour();
     this.generateCookiesperHour();
-    //var tableParent = document.getElementById('thead');
-
     // making a table row
     var trElement = document.createElement('tr');
     // append to the parent element
@@ -69,15 +67,10 @@ Store.prototype.render= function(){
          return Math.floor(Math.random() * (max - min + 1) +min);
      }
      function generateHeadRow(){
-        //var tableParent = document.getElementById('thead');
-        var trElement = document.createElement('tr');
-        // append to the parent element
+       var trElement = document.createElement('tr');
         tableParent.appendChild(trElement);
-        // making a td
         var thElement = document.createElement('th');
-        // fill the td with content
         thElement.textContent = 'location';
-        // append to the table row
         trElement.appendChild(thElement);
         for(var i=0; i<operationHours.length; i++){
             thElement=document.createElement('th');
@@ -92,15 +85,10 @@ Store.prototype.render= function(){
     
      function generateFootRow(){
          var totalOfTotal = 0;
-         //var tableParent = document.getElementById('thead');
          var trElement = document.createElement('tr');
-        // append to the parent element
-        tableParent.appendChild(trElement);
-        // making a th
+         tableParent.appendChild(trElement);
         var thElement = document.createElement('th');
-        // fill the th with a totals
         thElement.textContent = 'TOTALS';
-        // append to the table row
         trElement.appendChild(thElement);
         for(var i=0; i<operationHours.length; i++){
             var total=0 
