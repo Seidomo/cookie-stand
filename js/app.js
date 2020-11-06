@@ -122,8 +122,7 @@ Store.prototype.render= function(){
          
      }
 
-
-
+     
 
 
 
