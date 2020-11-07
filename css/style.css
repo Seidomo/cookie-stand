@@ -14,3 +14,32 @@ table, th ,td{
     font-style: oblique;
   }
   body{background-color: gray;}
+
+   #fish2{
+    background-color: white;
+    float: right;
+  }
+  #fam{
+    position: relative;
+
+  }
+  #store{
+    display: inline-flex;
+    border:2px dotted black;
+    margin: 10px;
+    color: whitesmoke;
+  }
+  #store div{
+    padding: 10px;
+
+  }
+  #shirt{ 
+    padding: 30px;
+    margin: 5px;
+  }
+  footer{
+    border: 2px solid wheat;
+    height: 30px;
+    color: wheat;
+    text-align: center;
+  }
