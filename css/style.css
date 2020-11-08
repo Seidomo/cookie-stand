@@ -37,7 +37,7 @@ table, th ,td{
     padding: 30px;
     margin: 5px;
   }
-  footer{
+  #foot{
     border: 2px solid wheat;
     height: 30px;
     color: wheat;
